@@ -4,6 +4,7 @@
  * @update Denis 2011.05.30 对add和use进行升级，支持数据模块化
  * @update Denis & Allenm 2011.05.31 优化 escapeHTML方法，支持对属性值的转义
  * @update Denis 调整use的第三个参数可以传递的值，通过传递true即可实现数据刷新且无需变更配置
+ * @update Denis 2011.08.11 移出styleDomain配置至config.js
  */
 (function($, undefined){
     var $isFunction = $.isFunction, $isArray = $.isArray, $each = $.each, ALICNWEB = 'alicnweb';
@@ -526,10 +527,6 @@
      */
     var doc = document, $util = $.util, cssLinks = {}, modules = {};
     $.extend({
-        /**
-         * default style domain
-         */
-        styleDomain: 'style.china.alibaba.com',
         /**
          * Generates a link node
          * @method loadCSS

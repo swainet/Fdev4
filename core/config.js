@@ -1,7 +1,7 @@
 /**
- * Baseed on jQuery JavaScript Library v1.5b1
  * Baseed on jQuery Gears
  * @Author: Denis 2011.01.21
+ * @update Denis 2011.08.11 “∆»ÎstyleDomain≈‰÷√
  */
 (function($){
     var $util = $.util, mudules = {
@@ -195,7 +195,7 @@
             js: ['web/valid'],
             ver: '1.0'
         }
-    }, url = 'http://{0}/{t}/lib/fdev-v4/widget/{p}.{t}?v={1}';
+    }, url = 'http://{0}/{t}/lib/fdev-v4/widget/{p}-min.{t}?v={1}';
     //init default mudules
     for (var name in mudules) {
         var configs = mudules[name], js = configs.js, css = configs.css, j, len;
@@ -217,4 +217,6 @@
         }
         $.add(name, configs);
     }
+	//2011.8.11 Denis style”Ú√˚≈‰÷√
+	$.styleDomain = 'style.china.alibaba.com';
 })(jQuery);

@@ -2,6 +2,9 @@
  * @usefor widget tabs
  * @author wb_hongss.ciic
  * @date 2011.02.21
+ * @update 2011.07.26 hongss 增加 reset 方法；在使用JS动态增加tab后调用，则新增部分也能融入到原tabs中生效。
+ * @update 2011.07.27 hongss 修复昨天修改后 e.target引起的title中不能加入其他元素的bug；改用e.currentTarget就OK。
+ * @update 2011.08.09 hongss 修复事件触发的节点index取兄弟节点中的index的bug；正确的应该是取被指定为触电元素集中的index
  * 
  * 在setTab前后分别增加了自定义事件select   show   last
  */
@@ -55,36 +58,35 @@
                 var timeId = null,
                 eventObj = {};
                 
-                self.titles.each(function(i){
-                    eventObj[events[0]] = function(e){
-                        if (timeId) {
-                            clearTimeout(timeId);
-                        }
-                        timeId = setTimeout(function(){
-                            self._onTitleFocue();
-                            if (self.index!==i) {
-                                self._setTab(i, e);
-                            }
-                        }, o.torpid);
+                eventObj[events[0]] = function(e){
+                    if (timeId) {
+                        clearTimeout(timeId);
                     }
-                    eventObj[events[1]] = function(e){
-                        clearTimeout(timeId);      
-                        timeId = setTimeout(function(){
-                            self._autoPlay(1, e);
-                        }, o.torpid);
-                    }
+                    var i = $(self.titles).index($(e.currentTarget));
                     
-                    $(self.titles[i]).bind(eventObj);
-                });
-            } else if (events.length===1) {
-                self.titles.each(function(i){
-                    $(self.titles[i]).bind(events[0], function(e){
+                    timeId = setTimeout(function(){
                         self._onTitleFocue();
                         if (self.index!==i) {
                             self._setTab(i, e);
                         }
+                    }, o.torpid);
+                }
+                eventObj[events[1]] = function(e){
+                    clearTimeout(timeId);
+                    timeId = setTimeout(function(){
                         self._autoPlay(1, e);
-                    });
+                    }, o.torpid);
+                }
+                
+                $(self.titles).live(eventObj);
+            } else if (events.length===1) {
+                $(self.titles).live(events[0], function(e){
+                    self._onTitleFocue();
+                    var i = $(self.titles).index($(e.currentTarget));
+                    if (self.index!==i) {
+                        self._setTab(i, e);
+                    }
+                    self._autoPlay(1, e);
                 });
             }
             
@@ -97,6 +99,13 @@
                     self._autoPlay(1);
                 });
             });
+        },
+        /**
+         * @methed reset 重置
+         */
+        reset: function(){
+            this.titles = this.element.find(this.options.titleSelector);
+            this.boxes = this.element.find(this.options.boxSelector);
         },
         /**
          * @methed _setTab 设置tab

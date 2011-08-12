@@ -278,10 +278,10 @@
          * 下拉框位置重定向
          */
         resetPanelPosition: function(){
-            var self = this, offset = self.result.offset();
+            var self = this, position = self.result.position();
             self.panel.css({
-                left: offset.left,
-                top: offset.top + self.result.outerHeight()
+                left: position.left,
+                top: position.top + self.result.outerHeight()
             });
             return self.panel;
         },
