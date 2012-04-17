@@ -1,0 +1,90 @@
+/**
+ * flying.css
+ * 基于双飞翼栅格布局
+ * @version 20101216
+ */
+
+/*
+ * html文档内容
+ */
+#header:after,
+#content:after,
+#footer:after{
+	content:"\0020";
+	display:block;
+	height:0;
+	clear:both;
+}
+#header,
+#content,
+#footer{
+    *zoom:1;
+}
+
+/*
+ * 文档内容节点
+ */
+.w952{
+	width:952px;
+	margin:0 auto;
+	padding:0 4px;
+}
+
+/** 布局基础样式 **/
+.grid-main{
+    float:left;
+    width:100%;
+    /* bug fix: 主栏没有内容时，在 Firefox 和 Chrome 等浏览器下，布局不对 */
+    min-height:1px;
+}
+.grid-sub,
+.grid-extra{
+    float:left;
+}
+
+/** 清除浮动 **/
+.layout:after,
+.main-wrap:after,
+.grid-sub:after,
+.grid-extra:after{
+	content:"\0020";
+	display:block;
+	height:0;
+	clear:both;
+}
+.layout,
+.main-wrap,
+.grid-sub,
+.grid-extra {
+    *zoom:1;
+}
+
+/**
+ * layout命名规则: .pX-sYm0eZ
+
+1. pX  表示栅格单元的颗粒大小，目前中文站支持两种：32px和24px，那么pX只能在p32、p24中择一
+2. sY  表示 gird-sub 的宽度 ＝ Y * X - 8，
+3. eZ  表示 grid-extra 的宽度 ＝ Z * X - 8，
+4. m0 表示 grid-main 的宽度 ＝ 952 - ( Y + Z ) * X，始终为m0
+5. s-m-e 的顺序，表示各列的排列顺序
+
+例：p32-e5m0s6 表示 grid-extra(192) | grid-main(512) | grid-sub(232)
+
+.p32-e5m0s6 .main-warp{ margin:0 240px 0 200px; }
+.p32-e5m0s6 .grid-sub{ width:232px; margin-left:-232px; }
+.p32-e5m0s6 .grid-extra{ width:192px; margin-left:-100%; }
+
+.p32-s6m0e5 .main-wrap{ margin: 0 200px 0 240px; }
+.p32-s6m0e5 .grid-sub{ width: 232px; margin-left: -100%; }
+.p32-s6m0e5 .grid-extra{ width: 192px; margin-left: -192px; }
+
+.p32-m0s6e5 .main-wrap{ margin-right: 440px; }
+.p32-m0s6e5 .grid-sub{ width: 232px; margin-left: -432px; }
+.p32-m0s6e5 .grid-extra{ width: 192px; margin-left: -192px; }
+
+.p32-m0e5s6 .main-wrap{ margin-right: 440px; }
+.p32-m0e5s6 .grid-sub{ width: 232px; margin-left: -232px; }
+.p32-m0e5s6 .grid-extra{ width: 192px; margin-left: -432px; }
+
+ *
+ */

@@ -1,0 +1,170 @@
+.xui-simpleGrid-panelBody .xui-simpleGrid-body .xui-simpleGrid-row {
+	zoom:1;
+	table-layout:fixed;
+}
+.xui-simpleGrid-panelBody button,.xui-simpleGrid-body button,.xui-simpleGrid-row button
+{margin:0;padding:0;font-size:12px;}
+.xui-simpleGrid-panel table {
+    table-layout:fixed;
+}
+.xui-simpleGrid-cell{
+	position:relative;
+	zoom:1;
+  /*  -moz-user-select: none;
+    -khtml-user-select:none;
+    -webkit-user-select:ignore;*/
+	-moz-user-focus: ignore !important; 
+	border-right:solid 1px #FFFFFF;
+}
+.xui-simpleGrid-header{
+	width:100%;
+	border:solid 1px  #e1e3e6;
+	background:  url(http://img.china.alibaba.com/images/lib/fdev4/widget/web/grid/eadvisor/simple-grid/simple-grid-hd.png)  repeat-x;
+	height:29px;
+	overflow:hidden;
+}
+.xui-simpleGrid-sort{
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	border:0 ;
+	cursor:pointer;
+	height:15px;
+	width:13px;
+	vertical-align:middle;
+	display:none;
+}
+
+.xui-simpleGrid-sort-asc .xui-simpleGrid-sort{
+	display:inline-block;
+	background:  url(http://img.china.alibaba.com/images/lib/fdev4/widget/web/grid/eadvisor/simple-grid/simple-grid.gif) no-repeat;
+	background-position:0 -90px;
+}
+.xui-simpleGrid-sort-desc .xui-simpleGrid-sort{
+	display:inline-block;
+	background: url(http://img.china.alibaba.com/images/lib/fdev4/widget/web/grid/eadvisor/simple-grid/simple-grid.gif) no-repeat;
+	background-position:-14px -90px;
+}
+.xui-simpleGrid-sort-default .xui-simpleGrid-sort{
+	display:inline-block;
+	background:url(http://img.china.alibaba.com/images/lib/fdev4/widget/web/grid/eadvisor/simple-grid/simple-grid.gif) no-repeat;
+	background-position:-14px -105px;
+}
+
+.xui-simpleGrid-hd-row{
+	height:29px;
+}
+.xui-simpleGrid-hd-row td{
+	border-right:solid 1px  #e1e3e6;
+	/*background:url(http://img.china.alibaba.com/images/lib/fdev4/widget/web/grid/eadvisor/simple-grid/simple-grid-hd-r.png)  no-repeat right;*/
+
+}
+.xui-simpleGrid-hd-row .last {
+	border-right:0;
+}
+
+.xui-simpleGrid-cell-inner, .xui-simpleGrid-hd-inner{
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+	overflow:hidden;
+	width:100%;
+}
+.xui-simpleGrid-hd-inner-default{
+	text-align:center;
+	color:#616161;
+	font-size:12px;
+	font-weight:bold;
+}
+.xui-simpleGrid-cell-inner-default{
+	text-align:center;
+	color:#505050;
+	font-size:12px;
+}
+
+.xui-simpleGrid-body{
+	border:solid 1px  #e1e3e6;
+	border-top:0;
+	margin-bottom:8px;
+}
+.xui-simpleGrid-row {
+	cursor: default;
+    width:100%;
+	height:116px;
+	line-height:116px;
+    vertical-align:middle;
+/*	border-bottom:solid 1px #e2e2e2;
+*/}
+.xui-simpleGrid-row-even{background:#fff}
+.xui-simpleGrid-row-odd{background:#f8fafb}
+.xui-simpleGrid-row-selected{
+	background:  url(http://img.china.alibaba.com/images/lib/fdev4/widget/web/grid/eadvisor/simple-grid/simple-grid-selected.png)  repeat-x;
+}
+.xui-simpleGrid-row-hover{
+	background-color:#fdfddc;
+}
+.xui-simpleGrid-row-last{
+	border-bottom: 0;
+}
+.xui-simpleGrid-pagebar{
+	width:100%;
+	height:22px;
+	overflow:hidden;
+	zoom:1;
+/*	border:solid 1px  #cecece;
+background:  url(http://img.china.alibaba.com/images/lib/fdev4/widget/web/grid/eadvisor/simple-grid/simple-grid-hd.png)  repeat-x;*/	
+}
+.xui-simpleGrid-pagebar button{ padding:0}
+.xui-simpleGrid-pagebar-detail{
+	float:left;
+	padding-top:2px;
+}
+.xui-simpleGrid-page{
+	float:right;
+}
+.xui-pagebar-btn-text {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	border:0 ;
+	cursor:pointer;
+	width:14px;height:17px;
+	margin-left:5px;
+	background: url(http://img.china.alibaba.com/images/lib/fdev4/widget/web/grid/eadvisor/simple-grid/simple-grid.gif) no-repeat;
+}
+.xui-pagebar-btn-go{
+	height:22px; width:40px;
+	vertical-align:baseline;
+}
+
+.xui-pagebar-btn-last{
+	background-position:-14px 3px;
+}
+.xui-pagebar-btn-last-disabled{
+	background-position:-14px -13px;
+}
+.xui-pagebar-btn-next{
+	background-position:0 3px;
+}
+.xui-pagebar-btn-next-disabled{
+	background-position:0 -13px;
+}
+.xui-pagebar-btn-prev{
+	background-position:0 -30px;
+}
+.xui-pagebar-btn-prev-disabled{
+	background-position:0 -76px;
+}
+.xui-pagebar-btn-first{
+	background-position:-14px -30px;
+}
+.xui-pagebar-btn-first-disabled{
+	background-position:-14px -76px;
+}
+.xui-pagebar-btn-number{
+	text-align:center;
+	width:30px;
+	height:13px;
+
+
+}

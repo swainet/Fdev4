@@ -1,0 +1,62 @@
+.ui-datepicker {background: white;height: auto;border: 1px solid #9bc0e0;font-size: 12px;font-family: Tahoma;}
+.ui-datepicker-multi1 {width: 189px !important;}
+.ui-datepicker-multi2 {width: 380px !important;_width: 373px;}
+.ui-datepicker-multi3 {width: 568px !important;_width: 560px;}
+.ui-datepicker {-moz-box-shadow: 2px 2px 0px #ccc;-webkit-box-shadow: 2px 2px 0px #ccc;-khtml-box-shadow: 2px 2px 0px #ccc;-ms-box-shadow: 2px 2px 0px #ccc;}
+
+.ui-datepicker .box {margin:4px;_margin:4px 2px;height:auto;width:auto;float:left;*padding-bottom:5px;_padding-bottom:3px;position:relative;}
+.ui-datepicker .hd {background:url('http://img.china.alibaba.com/cms/upload/2011/628/020/20826_548721671.gif') repeat-x 0 -41px; width:181px;height:24px;background-color:#40a6ff;position:relative;}
+.ui-datepicker .prev {overflow:hidden;text-indent:-100em;background:url('http://img.china.alibaba.com/cms/upload/2011/628/020/20826_548721671.gif') no-repeat 0 4px; height:1;width:10px;float:left;position:absolute;left:3px;top:3px;/*background-color:red;*/font-size:10px;text-decoration:none;color:white;}
+.ui-datepicker .next {overflow:hidden;text-indent:-100em;background:url('http://img.china.alibaba.com/cms/upload/2011/628/020/20826_548721671.gif') no-repeat 0 -15px; height:1;width:10px;position:absolute;right:3px;top:3px;/*background-color:red;*/font-size:10px;text-decoration:none;color:white;}
+
+.ui-datepicker .title,.ui-datepicker .title:link,.ui-datepicker .title:visited {color:white;text-decoration:none;position:relative;margin-left:auto;margin-right:auto;width:77px;height:17px;line-height:17px;display:block;top:3px;text-align:center;}
+.ui-datepicker .title:hover {border:1px solid #8cc6ff;top:2px;color:#f0ff00;background:url('http://img.china.alibaba.com/cms/upload/2011/628/020/20826_548721671.gif') repeat-x 0 -75px;}
+
+
+.ui-datepicker .bd {width:181px;}
+.ui-datepicker .whd {width:auto;height:19px;overflow:hidden;background-color:#cce7ff;margin-top:4px;*padding-left:2px;*width:179px;}
+.ui-datepicker .whd span {float:left;width:25.857px;text-align:center;line-height:19px;}
+
+/*--hack for ff2 {{ --*/
+.ui-datepicker .whd span, x:-moz-any-link {width:25px;}
+.ui-datepicker .whd span, x:-moz-any-link, x:default {width:25.857px;}
+/*--hack for ff2 }} --*/
+
+.ui-datepicker .dbd {width:181px;height:auto;background-color:white;margin-top:4px;*padding-left:2px;*width:179px;}
+.ui-datepicker .dbd a,.ui-datepicker .dbd a:link,.ui-datepicker .dbd a:visited {color:#004499;float:left;width:25.857px;text-align:center;line-height:22px;text-decoration:none;}
+.ui-datepicker .dbd a:hover {background-color:#ebf4fc;}
+
+/*--hack for ff2 {{ --*/
+.ui-datepicker .dbd a, x:-moz-any-link {width:25px;}
+.ui-datepicker .dbd a:link, x:-moz-any-link {width:25px;}
+.ui-datepicker .dbd a:visited, x:-moz-any-link {width:25px;}
+.ui-datepicker .dbd a,
+.ui-datepicker .dbd a:link,
+.ui-datepicker .dbd a:visited, x:-moz-any-link, x:default {width:25.857px;}
+/*--hack for ff2 }} --*/
+
+.ui-datepicker a.null,.ui-datepicker a.null:link,.ui-datepicker a.null:visited {background:white;color:white;cursor:default;}
+.ui-datepicker a.today,.ui-datepicker a.today:link,.ui-datepicker a.today:visited {color:#ff6600;font-weight:bold;}
+.ui-datepicker a.selected,.ui-datepicker a.selected:link,.ui-datepicker a.selected:visited {background-color:#cce7ff;}
+.ui-datepicker a.disabled,.ui-datepicker a.disabled:link,.ui-datepicker a.disabled:visited{color:#8c8c8c;cursor:default;background-color:white;}
+.ui-datepicker a.range,.ui-datepicker a.range:link,.ui-datepicker a.range:visited {background-color:#cce7ff;}
+
+.ui-datepicker .ft {text-align:center;width:181px;}
+.ui-datepicker .ft .ok, .ui-datepicker .ft .clear{width:36px;text-align:center;}
+.ui-datepicker .time {background-color:#e5e5e5;display:inline-block;*display:inline;*zoom:1;padding:1px 10px 1px 0;width:98px;position:relative;*top:-2px;_top:-1px;}
+.ui-datepicker .time .cta {width:13px;height:20px;position:absolute;right:0;top:0;line-height:0;}
+.ui-datepicker .time button {width:16px;height:10px;border:0;overflow:hidden;background:url("http://img.china.alibaba.com/cms/upload/2011/928/020/20829_548721671.gif") no-repeat;cursor:pointer;}
+.ui-datepicker .time button.u {background-position:0 0;}
+.ui-datepicker .time button.d {background-position:-16px 0;}
+.ui-datepicker .time span {cursor:pointer;}
+.ui-datepicker .time span.on {padding:0 1px;background-color:#333;color:white}
+
+.ui-datepicker .setime {position:absolute;left:0px;top:28px;right:0px;width:180px;background:#f2f2f2;border:1px solid #9bc0e0;text-align:center;vertical-align:middle;height:auto;padding-top:10px;padding-bottom:10px;}
+.ui-datepicker .setime p {height:30px;margin:0;padding:0;}
+.ui-datepicker .setime select,.ui-datepicker .setime input {width:80px;}
+
+.ui-datepicker .selectime {position:absolute;left:0px;bottom:28px;*bottom:32px;right:0px;width:180px;background:#f2f2f2;border:1px solid #9bc0e0;text-align:center;vertical-align:middle;height:auto;padding-top:10px;padding-bottom:10px;}
+.ui-datepicker .selectime a,.ui-datepicker .selectime a:link,.ui-datepicker .selectime a:visited {margin-left:10px;display:inline-block;*display:inline;float:left;text-decoration:none;color:#004499;}
+.ui-datepicker .selectime a:hover {text-decoration:underline;}
+.ui-datepicker a.x {position:absolute;right:3px;bottom:2px;font-weight:bold;font-family:"comic Sans MS"}
+.ui-datepicker .selectime select,.ui-datepicker .selectime input {width:80px;}

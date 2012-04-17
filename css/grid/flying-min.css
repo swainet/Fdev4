@@ -1,0 +1,1 @@
+#header:after,#content:after,#footer:after,.layout:after,.main-wrap:after,.grid-sub:after,.grid-extra:after{content:"\0020";display:block;height:0;clear:both;}#header,#content,#footer,.layout,.main-wrap,.grid-sub,.grid-extra{*zoom:1;}.w952{width:952px;margin:0 auto;padding:0 4px;}.grid-main{float:left;width:100%;min-height:1px;}.grid-sub,.grid-extra{float:left;}

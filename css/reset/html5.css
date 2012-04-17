@@ -1,0 +1,31 @@
+/**
+ * fdev html5 reset stylesheet
+ * v0.1 alpha
+ * last updated: 04.19.2011
+ * author: Edgar <mail@edgarhoo.net>
+ */
+article, aside, footer, header, hgroup, nav, section, /* section elements */
+figcaption, /* grouping elements */
+details,summary{ /* interactive elements */
+    display:block;
+}
+menu{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+figure{
+    display:block;
+    margin:0;
+}
+output,time{
+    display:inline;
+}
+mark{
+    display:inline;
+    background:yellow;
+    color:#000;
+}
+address{
+    padding:0;
+}

@@ -1,0 +1,61 @@
+/**
+ * grid.css
+ * 基于左浮的栅格布局
+ * @version 20110222
+ */
+
+/*
+ * 文档内容节点
+ */
+.w952{
+	width:952px;
+	margin:0 auto;
+	padding:0 4px;
+}
+/*
+ * html文档内容
+ */
+#header,
+#content,
+#footer,
+.layout{
+	zoom:1;
+}
+#header:after,
+#content:after,
+#footer:after,
+.layout:after{
+	content:"\0020";
+	display:block;
+	height:0;
+	clear:both;
+}
+.grid-fixed{
+    margin-right:0 !important;
+}
+
+/*基本单位为32的栅格系统-*/
+.layout .grid-1{ float:left; width:32px; margin-right:8px; }
+.layout .grid-2{ float:left; width:72px; margin-right:8px; }
+.layout .grid-3{ float:left; width:112px; margin-right:8px; }
+.layout .grid-4{ float:left; width:152px; margin-right:8px; }
+.layout .grid-5{ float:left; width:192px; margin-right:8px; }
+.layout .grid-6{ float:left; width:232px; margin-right:8px; }
+.layout .grid-7{ float:left; width:272px; margin-right:8px; }
+.layout .grid-8{ float:left; width:312px; margin-right:8px; }
+.layout .grid-9{ float:left; width:352px; margin-right:8px; }
+.layout .grid-10{ float:left; width:392px; margin-right:8px; }
+.layout .grid-11{ float:left; width:432px; margin-right:8px; }
+.layout .grid-12{ float:left; width:472px; margin-right:8px; }
+.layout .grid-13{ float:left; width:512px; margin-right:8px; }
+.layout .grid-14{ float:left; width:552px; margin-right:8px; }
+.layout .grid-15{ float:left; width:592px; margin-right:8px; }
+.layout .grid-16{ float:left; width:632px; margin-right:8px; }
+.layout .grid-17{ float:left; width:672px; margin-right:8px; }
+.layout .grid-18{ float:left; width:712px; margin-right:8px; }
+.layout .grid-19{ float:left; width:752px; margin-right:8px; }
+.layout .grid-20{ float:left; width:792px; margin-right:8px; }
+.layout .grid-21{ float:left; width:832px; margin-right:8px; }
+.layout .grid-22{ float:left; width:872px; margin-right:8px; }
+.layout .grid-23{ float:left; width:912px; margin-right:8px; }
+.layout .grid-24{ float:left; width:952px; }

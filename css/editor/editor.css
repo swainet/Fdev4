@@ -1,0 +1,92 @@
+/*** 标题样式 ***/
+.fd-editor h1{
+	font-size:32px;
+}
+.fd-editor h2{
+	font-size:24px;
+}
+.fd-editor h3{
+	font-size:20px;
+}
+.fd-editor h4{
+	font-size:16px;
+}
+.fd-editor h5{
+	font-size:14px;
+}
+.fd-editor h6{
+	font-size:12px;
+}
+
+/*** 加粗 ***/
+.fd-editor b, .fd-editor strong{
+	font-weight:bold;
+}
+
+/*** 斜体 ***/
+.fd-editor i, .fd-editor em{
+	 font-style: italic;
+}
+
+/*** 上标 ***/
+.fd-editor sup{
+	vertical-align:top;
+}
+
+/*** 下标 ***/
+.fd-editor sub{
+	vertical-align:bottom;
+}
+
+/*** 列表样式 ***/
+.fd-editor ul{
+	list-style-type:disc;
+}
+
+.fd-editor ol{
+	list-style-type:decimal;
+}
+
+.fd-editor li{
+	margin-left:4px;
+	padding:0;
+	list-style-position:inside;
+}
+
+.fd-editor p{
+	line-height:1.5;
+	clear:both;
+}
+
+/*** 表格样式 ***/
+.fd-editor table {
+	cursor:default;
+}
+
+.fd-editor table td, .fd-editor table th {
+	cursor:text;
+}
+
+fd-editor table th{background: #e0e0e0;font-size: 13px;}
+
+/*** 其他表现样式 ***/
+.fd-editor ins {
+	border-bottom:1px solid green; 
+	text-decoration: none;
+	color:green;
+}
+.fd-editor del {
+	color:red; 
+	text-decoration:line-through;
+}
+.fd-editor cite {
+	border-bottom:1px dashed blue;
+}
+.fd-editor acronym {
+	border-bottom:1px dotted #ccc; 
+	cursor:help;
+}
+.fd-editor abbr {
+	border-bottom:1px dashed #ccc; 
+	cursor:help;
+}

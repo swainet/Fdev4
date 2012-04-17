@@ -1,0 +1,63 @@
+.ui-colorbox .wrap {
+    position: relative;
+}
+
+.ui-colorbox em {
+    position: absolute;
+    left: -10000px;
+    top: -10000px;
+    z-index: 1;
+    display: block;
+    width: 9px;
+    height: 9px;
+    border: solid 1px #FFF;
+    line-height: 1px;
+}
+
+.ui-colorbox table {
+    background-color: #000;
+    table-layout: fixed;
+    width: 211px;
+    border-spacing: 1px;
+    border-collapse: separate;
+}
+
+.ui-colorbox th {
+    padding: 2px;
+    height: 17px;
+    background-color: #D6D6D6;
+}
+
+.ui-colorbox h6 {
+    float: left;
+    width: 40px;
+    height: 17px;
+    border: solid 1px #000;
+    background-color: #FFF;
+}
+
+.ui-colorbox .rgb {
+    float: left;
+    width: 140px;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    color: #000;
+    font-weight: 500;
+    font-family: "\5B8B\4F53";
+}
+
+.ui-colorbox .transparent {
+    float: right;
+    margin-top: 1px;
+    width: 17px;
+    height: 17px;
+    background: url(http://img.china.alibaba.com/cms/upload/2012/879/113/311978_548721671.png) no-repeat;
+}
+
+.ui-colorbox td {
+    width: 9px;
+    height: 9px;
+    font-size: 1px;
+    line-height: 1px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+    <title>Searchweb Architecture Demo</title>
+	<style>
+		.delayload{
+			height:160px;
+			width:199px;
+			border:1px solid red;
+			float:left;
+		}
+		.placehoder{
+			height:1360px;
+			width:400px;
+			border:1px solid black;
+		}
+		.delayinit{
+			height:260px;
+			width:400px;
+			border:1px solid blue;
+		}
+	</style>
+  </head>
+
+  <body>
+    <div class="content" id="content">
+	
+		<input id="sandboxBtn" type="button" value="模块间交互"/>
+		<br/><br/>
+		<input id="delayInitBtn" type="button" value="延迟初始化模块"/>
+        <div class="placehoder"> I am just a placehoder.</div>
+		
+		<div id="mod-search-lazyload1" class="domDetail delayload" data-mod-config='{"name":"title","url":"http://china.alibaba.com/offer/post/json/validate_result.htm"}'>
+			延迟加载模块触发节点--曝光加载
+			<img data-lazyload-src="http://i05.c.aliimg.com/img/ibank/2011/772/148/465841277_789219996.summ.jpg"/>
+		</div>
+		<div class="domDetail delayload">
+			延迟加载模块触发节--曝光加载
+			<img data-lazyload-src="http://i03.c.aliimg.com/img/product/63/51/82/63518284.summ.jpg"/>
+		</div>
+		
+		<div id="mod-search-lazyload2" combine-mod-config="combine1" class="delayinit">延迟加载模块触发节点--事件触发加载(mouseover)
+		</div>
+		
+		<!--bigRender优化方案-->
+		<div id="mod-search-bigrender1" script-mod-config='{"script":"mod-search-bigrender1-script","replace":true}' combine-mod-config="combine1" data-mod-config='{"name":"bigrender"}'>
+			<script type="text/html" id="mod-search-bigrender1-script">
+				<div id="mod-search-bigrender1" class="delayinit">
+					使用bigRender方式新添加的dom节点，用于减少页面dom节点个数和初始化js执行时间。
+					请参考：<a href="http://lifesinger.wordpress.com/2011/09/23/bigrender-for-taobao-item">http://lifesinger.wordpress.com/2011/09/23/bigrender-for-taobao-item</a>
+				</div>
+			</script>
+		</div>
+		
+    </div>
+	
+	<!--页面上只应该有一个很小的js文件被放置在<script>标签中加载，其余都是无阻塞加载-->
+	<script type="text/javascript" src="http://style.china.alibaba.com/js/lib/fdev-v4/app/jengine/seed.js"></script>
+	
+	<script>
+		jEngine.Core.Loader.js("http://style.china.alibaba.com/js/lib/fdev-v4/core/fdev-min.js",
+							   "http://style.china.alibaba.com/js/lib/fdev-v4/app/jengine/source/logger.js",
+							   "http://style.china.alibaba.com/js/lib/fdev-v4/app/jengine/source/sandbox.js",
+							   "http://style.china.alibaba.com/js/lib/fdev-v4/app/jengine/source/lazymodule.js",
+							   "http://style.china.alibaba.com/js/lib/fdev-v4/app/jengine/source/application.js",
+								"http://style.china.alibaba.com/js/lib/fdev-v4/app/jengine/example/config.js",
+								"http://style.china.alibaba.com/js/lib/fdev-v4/app/jengine/example/module1.js",
+								"http://style.china.alibaba.com/js/lib/fdev-v4/app/jengine/example/module2.js",
+								"http://style.china.alibaba.com/js/lib/fdev-v4/app/jengine/example/lazyinitmodule.js",
+								"http://style.china.alibaba.com/js/lib/fdev-v4/app/jengine/example/events.js",
+								"http://style.china.alibaba.com/js/lib/fdev-v4/app/jengine/example/app.start.js");
+	</script>
+  </body>
+
+</html>
