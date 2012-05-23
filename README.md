@@ -23,5 +23,3 @@ Fdev4是基于jQuery的web基础框架，它包括css和js两部分。
           * web/ 扩展到FE.ui FE.util的UI及功能组件
 
 本项目API及DEMO请访问 https://github.com/alicnwd/fdevlib-doc
-
-<embed src="http://player.youku.com/player.php/sid/XMTgwODEwOTgw/v.swf" quality="high" width="480" height="400" align="middle" allowScriptAccess="sameDomain" allowFullscreen="true" type="application/x-shockwave-flash"></embed>
